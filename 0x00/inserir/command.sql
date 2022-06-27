@@ -1,0 +1,14 @@
+CREATE TABLE CLIENTE (
+   id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+   nome VARCHAR(80) NOT NULL,
+   email VARCHAR(40) NOT NULL,
+   telefone INTEGER
+);
+
+INSERT INTO CLIENTE VALUES (1, "Betty", "betty@techcamps.com", 12345678);
+INSERT INTO CLIENTE VALUES (2, "Betty 2", "betty2@techcamps.com", 123456789);
+INSERT INTO CLIENTE VALUES (3, "Betty 3", "betty3@techcamps.com", 1234567891);
+INSERT INTO CLIENTE VALUES (4, "Betty 4", "betty4@techcamps.com", 12345678912);
+INSERT INTO CLIENTE VALUES (5, "Betty 5", "betty5@techcamps.com", 123456789123);
+
+SELECT * FROM CLIENTE;

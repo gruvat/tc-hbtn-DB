@@ -7,5 +7,7 @@ CREATE TABLE CLIENTE (
 
 INSERT INTO CLIENTE VALUES (1, "Betty", "betty@techcamps.com", 12345678);
 
-.output
-SELECT * FROM CLIENTE;
+-------------------------- SQLite cli output
+-- .output Cliente.txt
+-- .headers on
+-- SELECT * FROM CLIENTE;

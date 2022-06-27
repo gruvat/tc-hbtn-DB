@@ -1,0 +1,3 @@
+-------------------------- SQLite cli
+-- .open first_db.db
+-- .exit
