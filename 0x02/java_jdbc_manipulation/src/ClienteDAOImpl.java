@@ -11,6 +11,20 @@ public class ClienteDAOImpl implements ClienteDAO {
         }
     }
 
+    public void dropTable(String urlConexao) {
+        String SQL = String.format("DROP TABLE %s", tableName);
+        try {
+            Connection conn = connect(urlConexao);
+            Statement stmt = conn.createStatement();
+            stmt.executeUpdate(SQL);
+            //Closing database connections
+            stmt.close();
+            conn.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     @Override
     public void createTable(String urlConexao) {
         String SQL = String.format("CREATE TABLE %s (" +
@@ -33,7 +47,7 @@ public class ClienteDAOImpl implements ClienteDAO {
     }
 
     @Override
-    public void insert(String url_conexao, Cliente cliente) throws SQLException {
+    public void insert(String url_conexao, Cliente cliente) {
         String SQL = String.format("INSERT INTO '%s' (nome, idade, cpf, rg) VALUES (?, ?, ?, ?)", tableName);
         try {
             Connection conn = connect(url_conexao);

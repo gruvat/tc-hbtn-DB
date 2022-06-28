@@ -1,7 +1,7 @@
 import java.sql.SQLException;
 
 public class ClienteTest {
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) {
 
         String url = "jdbc:sqlite:sqlite_database_marco_2022.db";
 
@@ -10,6 +10,7 @@ public class ClienteTest {
         clienteDAOImpl.connect(url);
 
         // 2 - Criando a tabela
+        clienteDAOImpl.dropTable(url);
         clienteDAOImpl.createTable(url);
 
         // 3 - Inserindo clientes
