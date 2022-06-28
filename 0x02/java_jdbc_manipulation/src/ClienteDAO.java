@@ -9,7 +9,7 @@ public interface ClienteDAO {
 
     public void createTable(String urlConexao);
 
-    public void insert(String url_conexao, Cliente cliente);
+    public void insert(String url_conexao, Cliente cliente) throws SQLException;
 
     public void selectAll(String urlConexao);
 
