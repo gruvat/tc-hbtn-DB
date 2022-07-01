@@ -10,7 +10,7 @@ public class Pessoa {
     private String nome;
     private String email;
     private String cpf;
-    private String birthdate;
+    private String idade;
 
     public int getId() {
         return id;
@@ -44,11 +44,11 @@ public class Pessoa {
         this.cpf = cpf;
     }
 
-    public String getBirthdate() {
-        return birthdate;
+    public String getIdade() {
+        return idade;
     }
 
-    public void setBirthdate(String birthdate) {
-        this.birthdate = birthdate;
+    public void setIdade(String idade) {
+        this.idade = idade;
     }
 }

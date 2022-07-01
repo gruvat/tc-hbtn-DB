@@ -62,7 +62,7 @@ public class AdministrativoApp {
             p1.setNome("Marcos");
             p1.setEmail("marcos@gmail.com");
             p1.setCpf("12345678957");
-            p1.setBirthdate("30/01/3030");
+            p1.setIdade("30/01/3030");
 
             // 1) Criando um produto
             pessoaModel.create(p1);
