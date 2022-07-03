@@ -3,10 +3,12 @@ package models;
 import entities.Curso;
 
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
 import java.util.List;
 
 public class CursoModel {
 
+    @Transactional
     public void create(Curso curso) {
         EntityManager em = EntitySingleton.get();
         try {
@@ -16,9 +18,9 @@ public class CursoModel {
             em.getTransaction().commit();
             System.out.println("Curso criado com sucesso !!!");
         } catch (Exception e) {
-//            em.getTransaction().rollback();
-              throw e;
-//            System.err.println("Erro ao criar um curso !!!" + e.getMessage());
+            em.getTransaction().rollback();
+            System.err.println("Erro ao criar um curso !!!" + e.getMessage());
+            throw e;
         } finally {
             System.out.println("Finalizando a transação");
         }

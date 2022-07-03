@@ -52,22 +52,25 @@ public class GestaoCursosMain {
         // Relacionamentos de aluno
         aluno.setTelefones(List.of(telefone));
         aluno.setEnderecos(List.of(endereco));
-
-        // Relacionamento curso e aluno
         aluno.setCurso(curso);
 
+
+
         // -----------------------------------------------------------------
         // -----------------------------------------------------------------
         // -----------------------------------------------------------------
 
 
-        // CursoModel
+        curso.setAlunos(List.of(aluno));// CursoModel
         CursoModel cursoModel = new CursoModel();
         cursoModel.create(curso);
 
+        // Relacionamento curso e aluno
+//
+
         // AlunoModel
-        AlunoModel alunoModel = new AlunoModel();
-        alunoModel.create(aluno);
+//        AlunoModel alunoModel = new AlunoModel();
+//        alunoModel.update(aluno);
 
     }
 }
